@@ -145,7 +145,7 @@ const TaskTable = () => {
 
   const handleSave = async () => {
     setSearch("")
-    setPage(0)
+    // setPage(0)
     if (isEditMode) {
       dispatch(updateTask(currentTask._id, currentTask));
     } else {
