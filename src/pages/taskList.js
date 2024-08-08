@@ -281,7 +281,7 @@ const TaskTable = () => {
                       <TableCell style={{ border: '1px solid #ddd' }}>{task.description}</TableCell>
                       <TableCell style={{ border: '1px solid #ddd' }}>{new Date(task.dueDate).toLocaleDateString()}</TableCell>
                       <TableCell style={{ border: '1px solid #ddd' }}>
-                        <span className={getStatusClass(task.status)}>{task.status}</span></TableCell>
+                        <span className={getStatusClass(task.status)}>{task.status == "In Progress" ?'In_Progress' :task.status}</span></TableCell>
                       <TableCell style={{ border: '1px solid #ddd' }}>
                         <IconButton onClick={() => {/* handle edit */ }}>
                           <EditIcon color="primary" onClick={() => handleEditClick(task)} />
